@@ -15,9 +15,13 @@ int main() {
         displayAllWords();
         break;
     case '2':
-        generateFilesByFirstLetter(FULL_LIST_NAME);
+        chooseLetterToDisplay();
+        break;
+    case '3':
         break;
     default:
+        cout << "Exiting program...";
+        sleep(2);
         return 0;
     }
 

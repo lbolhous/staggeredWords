@@ -5,24 +5,31 @@ using namespace std;
 int main() {
 
     displayIntro();
-    displayMainMenu();
-
     char menuChoice;
-    cin >> menuChoice;
+    bool continueProgram = true;
 
-    switch (menuChoice) {
-    case '1':
-        displayAllWords();
-        break;
-    case '2':
-        chooseLetterToDisplay();
-        break;
-    case '3':
-        break;
-    default:
-        cout << "Exiting program...";
-        sleep(2);
-        return 0;
+    while (continueProgram)
+    {
+        displayMainMenu();
+
+        cin >> menuChoice;
+        switch (menuChoice) {
+        case '1':
+            displayAllWords();
+            break;
+        case '2':
+            chooseLetterToDisplay();
+            break;
+        case '3':
+            findStaggeredWords();
+            break;
+        default:
+            cout << "Exiting program...";
+            continueProgram = false;
+            sleep(2);
+            return 0;
+        }
+        system("cls");
     }
 
     return 0;

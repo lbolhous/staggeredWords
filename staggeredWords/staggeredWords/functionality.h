@@ -18,5 +18,8 @@ using namespace std;
 void displayAllWords();
 void chooseLetterToDisplay();
 void displayFileContents(const string& fileName);
+void findStaggeredWords();
+bool checkIfValid(string);
+
 void getKeypress();
 void sleep(int);
